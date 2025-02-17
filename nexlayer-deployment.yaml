@@ -1,0 +1,8 @@
+application:
+  name: "Hello World NextJS App"
+  pods:
+  - name: nextjs-nginx
+    path: /
+    image: ghcr.io/nexlayer/hello-world-nextjs:v0.0.1
+    servicePorts:
+    - 80

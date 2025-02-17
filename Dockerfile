@@ -8,6 +8,10 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy in build
 COPY .next /usr/share/nginx/html
 
+# Copy in default.conf
+RUN rm -f /etc/nginx/conf.d/default.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
 # start nginx
